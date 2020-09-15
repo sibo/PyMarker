@@ -15,7 +15,7 @@ import os, sys
 def collate(output_pdf, nPages, key):
 	origKey = key
 	mergedPDF = PdfFileMerger()
-	print("input key = " + key + "\n Collating pages:")
+	print(output_pdf + ": input key = " + key + "\n Collating pages:")
 	for j in range(nPages):
 		i = j + 1
 		if(os.path.exists(str(i)+".pdf")):
@@ -27,7 +27,7 @@ def collate(output_pdf, nPages, key):
 			key=key[1:]
 		else:
 			print("Error! Both " + str(i) + ".pdf and " + str(i)+key[0] + ".pdf are not files in this directory. Examine your file names and the key : " + origKey) 
-	mergedPDF.write(output_pdf)
+	mergedPDF.write(output_pdf.replace(" ",""))
 	print("complete!")
 
 if __name__ == "__main__":
