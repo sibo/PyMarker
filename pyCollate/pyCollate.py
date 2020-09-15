@@ -5,7 +5,7 @@ A python program to collate randomized exams from pdfs of different questions.
 0b) install PyPDF2 library with pip: "pip3 install pypdf2"
 1) names the files 1.pdf 2a.pdf 2b.pdf 3.pdf 4a.pdf 4b.pdf etc, all in one directory
 2) place this script in the same directory as the pdf files
-3) run this program. Example: "python3 pyCollate.py test.pdf [numberOfPDFfiles] ab"
+3) run this program. Example: "python3 pyCollate.py test.pdf [numberOfPDFfiles] ab" or "python3 pyCollate.py exams.csv [numberOfPDFfiles]" where exams.csv is a comma-delimited file with each line of the format "name,key"
 """
 
 from PyPDF2 import PdfFileMerger, PdfFileReader
